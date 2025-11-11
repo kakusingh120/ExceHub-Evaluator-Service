@@ -1,43 +1,41 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
-  "compilerOptions": {
-    // === File Layout ===
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "compilerOptions": {
+        /* === File Layout === */
+        "rootDir": "./src",
+        "outDir": "./dist",
 
-    // === Environment Settings ===
-    "target": "esnext",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "lib": ["esnext"],
-    "types": ["node"],
+        /* === Environment Settings === */
+        "target": "ES2020",
+        "module": "Node16",
+        "moduleResolution": "node16",
+        "lib": ["ES2020"],
+        "types": ["node"],
 
-    // === Output Settings ===
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+        /* === Output Settings === */
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
 
-    // === Type Checking ===
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": true,
+        /* === Type Checking === */
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": true,
 
-    // === Module & Import Behavior ===
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
+        /* === Module & Import Behavior === */
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
 
-    // === ESM-specific settings ===
-    "verbatimModuleSyntax": false,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-
-    // === Optional ===
-    // "noUncheckedSideEffectImports": true, // ❌ Remove this — it breaks Node-style imports
-    // "jsx": "react-jsx" // ❌ Remove unless you’re actually using React
-  },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules"]
+        /* === Optional (for stability & speed) === */
+        "isolatedModules": false,
+        "moduleDetection": "force"
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["node_modules"]
 }
